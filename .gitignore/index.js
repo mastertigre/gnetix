@@ -69,7 +69,6 @@ bot.on("message", function(message){
             var embed = new Discord.RichEmbed()
                 .setTitle("Information sur le clan")
                 .setDescription("Les statistiques du clan recherché sur le meilleur site")
-                .addField("Par World Of Tanks", "https://worldoftanks.eu/fr/community/accounts/#wot&at_search=" + args.join("%20"))
                 .addField("Par WOT-LIFE", "https://fr.wot-life.com/eu/player/" + args.join("%20"))
                 .setColor(0x00FF00)
                 .setFooter("Gnetix bot copyright M4ST3R_CH1PS")
