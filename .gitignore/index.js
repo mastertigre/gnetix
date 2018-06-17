@@ -60,7 +60,7 @@ bot.on("message", function(message){
                 .addField("Par WOT STAT", "http://www.wotstats.org/stats/eu/" + args.join("%20"))
                 .addField("Par NoobMeter", "http://www.noobmeter.com/player/eu/" + args.join("%20"))
                 .setColor(0x00FF00)
-                .setFooter("Gnetix bot copyright M4ST3R T1GR3")
+                .setFooter("Gnetix bot copyright M4ST3R_CHIPS")
             message.channel.sendEmbed(embed);
             break;
 
