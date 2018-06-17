@@ -43,7 +43,7 @@ bot.on("message", function(message){
 
     switch (args[0].toLowerCase()) {
         case "ping":
-            message.channel.sendMessage("Ton ping est de " + (this.pings.reduce((prev, p) => prev + p, 0) / this.pings.length - 100) + " !");
+            message.channel.sendMessage("Ton ping est de " + (this.pings.reduce((prev, p) => prev + p, 0) / this.pings.length - 10) + " !");
             break;
 
         case "info":
@@ -60,11 +60,11 @@ bot.on("message", function(message){
                 .addField("Par WOT STAT", "http://www.wotstats.org/stats/eu/" + args.join("%20"))
                 .addField("Par NoobMeter", "http://www.noobmeter.com/player/eu/" + args.join("%20"))
                 .setColor(0x00FF00)
-                .setFooter("Gnetix bot copyright M4ST3R_CHIPS")
+                .setFooter("Gnetix bot copyright M4ST3R_CH1PS")
             message.channel.sendEmbed(embed);
             break;
 
-	case "clan":
+			case "clan":
             args.shift("")
             var embed = new Discord.RichEmbed()
                 .setTitle("Information sur le clan")
@@ -109,12 +109,12 @@ bot.on("message", function(message){
 			var server = servers[message.guild.id];
 			
 			if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
-			break;
-		    
-
+			break;			
+					
         default:
             message.channel.sendMessage("Invalid command");
     }
 });
+
 
 bot.login(process.env.TOKEN);
