@@ -110,6 +110,16 @@ bot.on("message", function(message){
 			
 			if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
 			break;
+		    
+		case "clear"
+			if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission !");
+			
+			let args = message.content.split(" ").slice(1);
+			
+			if (!args[0]) return message.channel.send("Tu dois préciser un nombre de messages à supprimer !")
+			message.channel.bulkDelete(args[0]).then(() = {
+				message.channel.send('${args[0]} message ont été supprimés !');
+			});
 
         default:
             message.channel.sendMessage("Invalid command");
